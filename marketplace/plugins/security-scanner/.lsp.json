@@ -1,0 +1,80 @@
+{
+    "semgrep": {
+        "command": "semgrep",
+        "args": [
+            "lsp"
+        ],
+        "extensionToLanguage": {
+            ".py": "python",
+            ".js": "javascript",
+            ".ts": "typescript",
+            ".go": "go",
+            ".java": "java",
+            ".rb": "ruby"
+        },
+        "initializationOptions": {
+            "diagnostics": true,
+            "hover": true,
+            "autofix": true
+        },
+        "settings": {
+            "semgrep.rules": [
+                "p/security-audit",
+                "p/owasp-top-ten"
+            ],
+            "semgrep.severity": [
+                "error",
+                "warning"
+            ]
+        }
+    },
+    "bandit-python": {
+        "command": "${CLAUDE_PLUGIN_ROOT}/servers/bandit-lsp",
+        "args": [
+            "--config",
+            "${CLAUDE_PLUGIN_ROOT}/config/bandit.yaml"
+        ],
+        "extensionToLanguage": {
+            ".py": "python"
+        },
+        "transport": "stdio",
+        "env": {
+            "PYTHONPATH": "${CLAUDE_PLUGIN_ROOT}"
+        },
+        "startupTimeout": 10000,
+        "shutdownTimeout": 5000,
+        "restartOnCrash": true,
+        "maxRestarts": 3,
+        "loggingConfig": {
+            "args": [
+                "--log-level",
+                "debug"
+            ],
+            "env": {
+                "BANDIT_LOG": "${CLAUDE_PLUGIN_LSP_LOG_FILE}"
+            }
+        }
+    },
+    "snyk-security": {
+        "command": "npx",
+        "args": [
+            "@snyk/language-server",
+            "--stdio"
+        ],
+        "extensionToLanguage": {
+            ".js": "javascript",
+            ".ts": "typescript",
+            ".jsx": "javascriptreact",
+            ".tsx": "typescriptreact",
+            ".py": "python",
+            ".go": "go"
+        },
+        "env": {
+            "SNYK_TOKEN": "${SNYK_TOKEN}"
+        },
+        "initializationOptions": {
+            "automaticAuthentication": false,
+            "enableTrustedFoldersFeature": true
+        }
+    }
+}

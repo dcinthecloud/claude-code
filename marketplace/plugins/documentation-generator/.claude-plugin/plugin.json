@@ -1,0 +1,21 @@
+{
+    "name": "documentation-generator",
+    "version": "1.0.0",
+    "description": "AI-powered documentation generation with skills and agents for creating comprehensive docs",
+    "author": {
+        "name": "Daniel Cunningham",
+        "email": "dancunningham21@gmail.com"
+    },
+    "license": "MIT",
+    "keywords": [
+        "docs",
+        "documentation",
+        "markdown",
+        "api-docs",
+        "jsdoc",
+        "docstrings"
+    ],
+    "commands": "./commands/",
+    "agents": "./agents/",
+    "skills": "./skills/"
+}

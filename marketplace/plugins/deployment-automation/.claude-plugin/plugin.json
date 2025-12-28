@@ -1,0 +1,20 @@
+{
+    "name": "deployment-automation",
+    "version": "1.0.0",
+    "description": "Automated deployment workflows with MCP server integration for CI/CD pipelines",
+    "author": {
+        "name": "Daniel Cunningham",
+        "email": "dancunningham21@gmail.com"
+    },
+    "license": "MIT",
+    "keywords": [
+        "deploy",
+        "ci-cd",
+        "automation",
+        "kubernetes",
+        "docker"
+    ],
+    "commands": "./commands/",
+    "agents": "./agents/",
+    "mcpServers": "./.mcp.json"
+}

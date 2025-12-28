@@ -1,0 +1,21 @@
+{
+    "name": "testing-suite",
+    "version": "1.0.0",
+    "description": "Advanced testing tools with hooks for automated test execution and coverage tracking",
+    "author": {
+        "name": "Daniel Cunningham",
+        "email": "dancunningham21@gmail.com"
+    },
+    "license": "MIT",
+    "keywords": [
+        "testing",
+        "unit-tests",
+        "integration",
+        "coverage",
+        "tdd"
+    ],
+    "commands": "./commands/",
+    "agents": "./agents/",
+    "skills": "./skills/",
+    "hooks": "./hooks/hooks.json"
+}

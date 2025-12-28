@@ -1,0 +1,20 @@
+{
+    "name": "git-workflow",
+    "version": "1.0.0",
+    "description": "Enhanced Git workflows with commit hooks, branch management, and PR automation",
+    "author": {
+        "name": "Daniel Cunningham",
+        "email": "dancunningham21@gmail.com"
+    },
+    "license": "MIT",
+    "keywords": [
+        "git",
+        "workflow",
+        "commits",
+        "branches",
+        "pull-requests"
+    ],
+    "commands": "./commands/",
+    "agents": "./agents/",
+    "hooks": "./hooks/hooks.json"
+}

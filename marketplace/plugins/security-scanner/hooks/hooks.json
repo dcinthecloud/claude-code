@@ -1,0 +1,48 @@
+{
+    "hooks": {
+        "PreToolUse": [
+            {
+                "matcher": "Write|Edit",
+                "hooks": [
+                    {
+                        "type": "prompt",
+                        "prompt": "Security check before writing: Verify the code does not contain hardcoded secrets, maintain input validation, use parameterized queries, and follow secure coding practices. Context: $ARGUMENTS"
+                    }
+                ]
+            }
+        ],
+        "PostToolUse": [
+            {
+                "matcher": "Write|Edit",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "${CLAUDE_PLUGIN_ROOT}/scripts/quick-security-check.sh"
+                    }
+                ]
+            }
+        ],
+        "Notification": [
+            {
+                "matcher": "security|vulnerability|critical",
+                "hooks": [
+                    {
+                        "type": "prompt",
+                        "prompt": "Security notification received. Analyze the notification and provide immediate remediation steps."
+                    }
+                ]
+            }
+        ],
+        "PermissionRequest": [
+            {
+                "matcher": "network|file|execute",
+                "hooks": [
+                    {
+                        "type": "prompt",
+                        "prompt": "Permission requested for: $ARGUMENTS. Evaluate security implications before proceeding."
+                    }
+                ]
+            }
+        ]
+    }
+}

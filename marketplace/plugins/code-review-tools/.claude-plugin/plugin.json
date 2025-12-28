@@ -1,0 +1,27 @@
+{
+    "name": "code-review-tools",
+    "version": "1.0.0",
+    "description": "Comprehensive code review toolset with commands, agents, skills, and hooks for automated code quality analysis",
+    "author": {
+        "name": "Daniel Cunningham",
+        "email": "dancunningham21@gmail.com",
+        "url": "https://github.com/dcinthecloud"
+    },
+    "homepage": "https://github.com/dcinthecloud/claude-code/tree/main/marketplace/plugins/code-review-tools",
+    "repository": "https://github.com/dcinthecloud/claude-code",
+    "license": "MIT",
+    "keywords": [
+        "review",
+        "code-quality",
+        "linting",
+        "analysis",
+        "best-practices"
+    ],
+    "commands": [
+        "./commands/"
+    ],
+    "agents": "./agents/",
+    "skills": "./skills/",
+    "hooks": "./hooks/hooks.json",
+    "outputStyles": "./styles/"
+}

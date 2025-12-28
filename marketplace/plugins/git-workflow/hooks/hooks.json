@@ -1,0 +1,57 @@
+{
+    "hooks": {
+        "SubagentStart": [
+            {
+                "hooks": [
+                    {
+                        "type": "prompt",
+                        "prompt": "Subagent starting. Ensure the subagent follows git workflow conventions and creates properly formatted commits."
+                    }
+                ]
+            }
+        ],
+        "SubagentStop": [
+            {
+                "hooks": [
+                    {
+                        "type": "prompt",
+                        "prompt": "Subagent stopping. Verify all git operations were completed successfully and no uncommitted changes remain."
+                    }
+                ]
+            }
+        ],
+        "PostToolUseFailure": [
+            {
+                "matcher": "git",
+                "hooks": [
+                    {
+                        "type": "agent",
+                        "prompt": "Git operation failed. Analyze the error and attempt recovery: 1) Check for merge conflicts, 2) Verify remote connectivity, 3) Check authentication, 4) Suggest resolution steps."
+                    }
+                ]
+            }
+        ],
+        "PostToolUse": [
+            {
+                "matcher": "Write|Edit",
+                "hooks": [
+                    {
+                        "type": "prompt",
+                        "prompt": "File modified. Remember to stage changes with git add if preparing for commit. Suggest appropriate commit message based on the change."
+                    }
+                ]
+            }
+        ],
+        "UserPromptSubmit": [
+            {
+                "matcher": "commit|push|merge|rebase|pr|pull request",
+                "hooks": [
+                    {
+                        "type": "prompt",
+                        "prompt": "Git operation requested. Check current branch status, uncommitted changes, and remote sync state before proceeding."
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,90 @@
+{
+  "name": "daniel-tools",
+  "owner": {
+    "name": "Daniel Cunningham",
+    "email": "dancunningham21@gmail.com"
+  },
+  "metadata": {
+    "description": "A comprehensive marketplace showcasing all Claude Code plugin component types including commands, agents, skills, hooks, MCP servers, and LSP servers.",
+    "version": "1.0.0",
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "code-review-tools",
+      "source": "code-review-tools",
+      "description": "Comprehensive code review toolset with commands, agents, and hooks",
+      "version": "1.0.0",
+      "author": {
+        "name": "Daniel Cunningham",
+        "email": "dancunningham21@gmail.com"
+      },
+      "homepage": "https://github.com/dcinthecloud/claude-code",
+      "repository": "https://github.com/dcinthecloud/claude-code",
+      "license": "MIT",
+      "keywords": ["review", "code-quality", "linting", "analysis"],
+      "category": "productivity",
+      "tags": ["essential", "recommended"]
+    },
+    {
+      "name": "deployment-automation",
+      "source": "deployment-automation",
+      "description": "Automated deployment workflows with MCP server integration",
+      "version": "1.0.0",
+      "author": {
+        "name": "Daniel Cunningham"
+      },
+      "license": "MIT",
+      "keywords": ["deploy", "ci-cd", "automation"],
+      "category": "devops"
+    },
+    {
+      "name": "testing-suite",
+      "source": "testing-suite",
+      "description": "Advanced testing tools with hooks for test automation",
+      "version": "1.0.0",
+      "author": {
+        "name": "Daniel Cunningham"
+      },
+      "license": "MIT",
+      "keywords": ["testing", "unit-tests", "integration", "coverage"],
+      "category": "testing"
+    },
+    {
+      "name": "documentation-generator",
+      "source": "documentation-generator",
+      "description": "AI-powered documentation generation with skills and agents",
+      "version": "1.0.0",
+      "author": {
+        "name": "Daniel Cunningham"
+      },
+      "license": "MIT",
+      "keywords": ["docs", "documentation", "markdown", "api-docs"],
+      "category": "documentation"
+    },
+    {
+      "name": "security-scanner",
+      "source": "security-scanner",
+      "description": "Security scanning with LSP-like diagnostics and hook integrations",
+      "version": "1.0.0",
+      "author": {
+        "name": "Daniel Cunningham"
+      },
+      "license": "MIT",
+      "keywords": ["security", "vulnerability", "scanning", "sast"],
+      "category": "security"
+    },
+    {
+      "name": "git-workflow",
+      "source": "git-workflow",
+      "description": "Enhanced Git workflows with commit hooks and branch management",
+      "version": "1.0.0",
+      "author": {
+        "name": "Daniel Cunningham"
+      },
+      "license": "MIT",
+      "keywords": ["git", "workflow", "commits", "branches"],
+      "category": "version-control"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+/* Output Styles for Code Review Plugin */
+
+/* Style definitions for formatted review output */
+
+.review-summary {
+  border-left: 4px solid #3b82f6;
+  padding-left: 16px;
+  margin-bottom: 16px;
+}
+
+.critical-issue {
+  background-color: rgba(239, 68, 68, 0.1);
+  border-left: 4px solid #ef4444;
+  padding: 8px 16px;
+  margin: 8px 0;
+}
+
+.warning-issue {
+  background-color: rgba(245, 158, 11, 0.1);
+  border-left: 4px solid #f59e0b;
+  padding: 8px 16px;
+  margin: 8px 0;
+}
+
+.info-note {
+  background-color: rgba(59, 130, 246, 0.1);
+  border-left: 4px solid #3b82f6;
+  padding: 8px 16px;
+  margin: 8px 0;
+}
+
+.positive-note {
+  background-color: rgba(34, 197, 94, 0.1);
+  border-left: 4px solid #22c55e;
+  padding: 8px 16px;
+  margin: 8px 0;
+}
+
+.code-suggestion {
+  font-family: monospace;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 8px;
+  border-radius: 4px;
+}

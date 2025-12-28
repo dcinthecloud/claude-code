@@ -1,0 +1,36 @@
+version: 1
+pipelines:
+  main:
+    stages:
+      - name: build
+        steps:
+          - npm install
+          - npm run build
+          - npm run test:unit
+      - name: test
+        steps:
+          - npm run test:integration
+          - npm run test:e2e
+      - name: deploy
+        when:
+          branch: main
+        steps:
+          - deploy staging
+          - run smoke tests
+          - deploy production
+
+environments:
+  staging:
+    url: https://staging.example.com
+    auto_deploy: true
+  production:
+    url: https://example.com
+    auto_deploy: false
+    requires_approval: true
+
+notifications:
+  slack:
+    channel: "#deployments"
+  email:
+    recipients:
+      - team@example.com

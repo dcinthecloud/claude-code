@@ -1,0 +1,33 @@
+{
+    "connection": {
+        "type": "sqlite",
+        "database": "${CLAUDE_PLUGIN_ROOT}/data/deployments.db"
+    },
+    "tables": {
+        "deployments": {
+            "columns": [
+                "id",
+                "service",
+                "version",
+                "environment",
+                "status",
+                "timestamp",
+                "user"
+            ]
+        },
+        "rollbacks": {
+            "columns": [
+                "id",
+                "deployment_id",
+                "from_version",
+                "to_version",
+                "status",
+                "timestamp"
+            ]
+        }
+    },
+    "logging": {
+        "level": "info",
+        "file": "${CLAUDE_PLUGIN_ROOT}/logs/db.log"
+    }
+}

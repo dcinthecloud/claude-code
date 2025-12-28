@@ -1,0 +1,47 @@
+{
+    "hooks": {
+        "PostToolUse": [
+            {
+                "matcher": "Write|Edit",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "${CLAUDE_PLUGIN_ROOT}/scripts/lint-check.sh"
+                    }
+                ]
+            }
+        ],
+        "PreToolUse": [
+            {
+                "matcher": "Write",
+                "hooks": [
+                    {
+                        "type": "prompt",
+                        "prompt": "Before writing code, verify: 1) Follows project conventions 2) Has appropriate error handling 3) Includes type annotations. Context: $ARGUMENTS"
+                    }
+                ]
+            }
+        ],
+        "UserPromptSubmit": [
+            {
+                "matcher": "review|lint|analyze",
+                "hooks": [
+                    {
+                        "type": "prompt",
+                        "prompt": "User is requesting code analysis. Prepare to use the code-reviewer agent and quality skills."
+                    }
+                ]
+            }
+        ],
+        "Stop": [
+            {
+                "hooks": [
+                    {
+                        "type": "prompt",
+                        "prompt": "Before stopping, ask if the user would like a summary review of all code changes made in this session."
+                    }
+                ]
+            }
+        ]
+    }
+}

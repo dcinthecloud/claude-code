@@ -1,0 +1,22 @@
+{
+    "name": "security-scanner",
+    "version": "1.0.0",
+    "description": "Security scanning with LSP-like diagnostics and hook integrations for vulnerability detection",
+    "author": {
+        "name": "Daniel Cunningham",
+        "email": "dancunningham21@gmail.com"
+    },
+    "license": "MIT",
+    "keywords": [
+        "security",
+        "vulnerability",
+        "scanning",
+        "sast",
+        "secrets"
+    ],
+    "commands": "./commands/",
+    "agents": "./agents/",
+    "skills": "./skills/",
+    "hooks": "./hooks/hooks.json",
+    "lspServers": "./.lsp.json"
+}

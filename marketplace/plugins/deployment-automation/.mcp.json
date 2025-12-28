@@ -1,0 +1,47 @@
+{
+    "mcpServers": {
+        "deployment-db": {
+            "command": "${CLAUDE_PLUGIN_ROOT}/servers/deployment-db",
+            "args": [
+                "--config",
+                "${CLAUDE_PLUGIN_ROOT}/config/db-config.json"
+            ],
+            "env": {
+                "DB_PATH": "${CLAUDE_PLUGIN_ROOT}/data",
+                "LOG_LEVEL": "info"
+            }
+        },
+        "kubernetes-client": {
+            "command": "kubectl",
+            "args": [
+                "proxy",
+                "--port=8001"
+            ],
+            "env": {
+                "KUBECONFIG": "${HOME}/.kube/config"
+            }
+        },
+        "docker-manager": {
+            "command": "npx",
+            "args": [
+                "@daniel/docker-mcp-server",
+                "--plugin-mode"
+            ],
+            "cwd": "${CLAUDE_PLUGIN_ROOT}",
+            "env": {
+                "DOCKER_HOST": "unix:///var/run/docker.sock"
+            }
+        },
+        "ci-pipeline": {
+            "command": "${CLAUDE_PLUGIN_ROOT}/servers/ci-server",
+            "args": [
+                "--watch",
+                "--interval",
+                "30"
+            ],
+            "env": {
+                "CI_CONFIG": "${CLAUDE_PLUGIN_ROOT}/config/ci-config.yaml"
+            }
+        }
+    }
+}

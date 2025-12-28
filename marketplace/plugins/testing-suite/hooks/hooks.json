@@ -1,0 +1,56 @@
+{
+    "hooks": {
+        "PostToolUse": [
+            {
+                "matcher": "Write|Edit",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "${CLAUDE_PLUGIN_ROOT}/scripts/run-related-tests.sh"
+                    }
+                ]
+            }
+        ],
+        "PreToolUse": [
+            {
+                "matcher": "Write",
+                "hooks": [
+                    {
+                        "type": "prompt",
+                        "prompt": "Before writing production code, consider: Does this code have corresponding tests? If not, should we write them first (TDD approach)? Context: $ARGUMENTS"
+                    }
+                ]
+            }
+        ],
+        "SessionStart": [
+            {
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "${CLAUDE_PLUGIN_ROOT}/scripts/check-test-status.sh"
+                    }
+                ]
+            }
+        ],
+        "SessionEnd": [
+            {
+                "hooks": [
+                    {
+                        "type": "prompt",
+                        "prompt": "Session ending. Generate a summary of all tests run during this session, including pass/fail counts and any coverage changes."
+                    }
+                ]
+            }
+        ],
+        "PreCompact": [
+            {
+                "hooks": [
+                    {
+                        "type": "prompt",
+                        "prompt": "Before compacting history, ensure test results and coverage data are preserved in the summary."
+                    }
+                ]
+            }
+        ]
+    }
+}
