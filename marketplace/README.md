@@ -7,11 +7,12 @@ A comprehensive marketplace showcasing all Claude Code plugin component types in
 ### From GitHub (Recommended)
 
 ```bash
-# Using GitHub shorthand
-/plugin marketplace add github:dcinthecloud/claude-code --path marketplace
+# Using GitHub shorthand with path to marketplace subdirectory
+/plugin marketplace add github:dcinthecloud/claude-code/marketplace
 
-# Using full GitHub URL
-/plugin marketplace add https://github.com/dcinthecloud/claude-code.git --path marketplace
+# Alternative: clone repo first, then add locally
+git clone https://github.com/dcinthecloud/claude-code.git
+/plugin marketplace add ./claude-code/marketplace
 ```
 
 ### From Local Clone
