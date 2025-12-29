@@ -117,6 +117,31 @@
         "branches"
       ],
       "category": "version-control"
+    },
+    {
+      "name": "speckit",
+      "source": "./plugins/speckit",
+      "description": "Spec-Driven Development toolkit - create specifications, plans, tasks, and implementations without the specify CLI",
+      "version": "1.0.0",
+      "author": {
+        "name": "Daniel Cunningham",
+        "email": "dancunningham21@gmail.com"
+      },
+      "homepage": "https://github.com/github/spec-kit",
+      "repository": "https://github.com/dcinthecloud/claude-code",
+      "license": "MIT",
+      "keywords": [
+        "spec-kit",
+        "specification",
+        "planning",
+        "sdd",
+        "spec-driven-development"
+      ],
+      "category": "productivity",
+      "tags": [
+        "essential",
+        "recommended"
+      ]
     }
   ]
 }

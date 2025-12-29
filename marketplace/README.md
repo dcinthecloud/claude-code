@@ -65,6 +65,7 @@ Once the marketplace is added, install individual plugins:
 | [documentation-generator](#documentation-generator) | AI-powered documentation | Commands, Agents, Skills |
 | [security-scanner](#security-scanner) | Security scanning | Commands, Agents, Skills, Hooks, LSP Servers |
 | [git-workflow](#git-workflow) | Enhanced Git workflows | Commands, Agents, Hooks |
+| [speckit](#speckit) | Spec-Driven Development toolkit | Commands, Agents, Skills, Bundled Assets |
 
 ## Plugin Details
 
@@ -199,6 +200,37 @@ Enhanced Git workflows with commit hooks and branch management.
 - SubagentStop: Verify git operations completion
 - PostToolUseFailure: Git error recovery (agent type)
 - UserPromptSubmit: Git command preparation
+
+---
+
+### speckit
+
+Spec-Driven Development toolkit - build software through specifications instead of vibe coding.
+
+**Commands:**
+- `/speckit.init` - Initialize spec-kit in a project
+- `/speckit.constitution` - Define project principles
+- `/speckit.specify` - Create feature specification
+- `/speckit.clarify` - Clarify ambiguous requirements
+- `/speckit.plan` - Generate implementation plan
+- `/speckit.tasks` - Break down into tasks
+- `/speckit.implement` - Execute tasks
+- `/speckit.analyze` - Validate consistency
+- `/speckit.checklist` - Generate quality checklists
+- `/speckit.taskstoissues` - Convert tasks to GitHub issues
+
+**Agents:**
+- Spec Writer - Requirements and specification expert
+- Planner - Architecture and task breakdown specialist
+
+**Skills:**
+- Spec-Driven Development - Core SDD methodology
+- Requirements Analysis - Requirement quality validation
+
+**Bundled Assets:**
+- 5 bash scripts for automation
+- 5 templates (spec, plan, tasks, checklist, agent)
+- Constitution template
 
 ## Component Configuration Reference
 

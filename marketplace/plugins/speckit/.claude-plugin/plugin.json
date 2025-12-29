@@ -1,0 +1,22 @@
+{
+    "name": "speckit",
+    "version": "1.0.0",
+    "description": "Spec-Driven Development toolkit for Claude Code - create specifications, plans, tasks, and implementations without installing the specify CLI",
+    "author": {
+        "name": "Daniel Cunningham",
+        "email": "dancunningham21@gmail.com"
+    },
+    "homepage": "https://github.com/github/spec-kit",
+    "repository": "https://github.com/dcinthecloud/claude-code",
+    "license": "MIT",
+    "keywords": [
+        "spec-kit",
+        "specification",
+        "planning",
+        "sdd",
+        "spec-driven-development"
+    ],
+    "commands": "./commands/",
+    "agents": "./agents/",
+    "skills": "./skills/"
+}
